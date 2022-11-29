@@ -27,17 +27,28 @@ namespace TweetsClassification
             return model;
         }
 
+        //auto-generated code
         /// <summary>
         /// build the pipeline that is used from model builder. Use this function to retrain model.
         /// </summary>
         /// <param name="mlContext"></param>
         /// <returns></returns>
-        public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
+        /*public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations
             var pipeline = mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"IsFake",inputColumnName:@"IsFake")      
                                     .Append(mlContext.MulticlassClassification.Trainers.TextClassification(labelColumnName: @"IsFake", sentence1ColumnName: @"Cleaned_Tweets"))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"PredictedLabel",inputColumnName:@"PredictedLabel"));
+
+            return pipeline;
+        }*/
+
+        public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
+        {
+            // Data process configuration with pipeline data transformations
+            var pipeline = mlContext.Transforms.Conversion.MapValueToKey(outputColumnName: @"IsFake", inputColumnName: @"IsFake")
+                                    .Append(mlContext.MulticlassClassification.Trainers.TextClassification(labelColumnName: @"IsFake", sentence1ColumnName: @"Cleaned_Tweets", batchSize: 64, maxEpochs: 4))
+                                    .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName: @"PredictedLabel", inputColumnName: @"PredictedLabel"));
 
             return pipeline;
         }
