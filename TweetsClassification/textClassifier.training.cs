@@ -19,9 +19,9 @@ namespace TweetsClassification
         /// <param name="mlContext"></param>
         /// <param name="trainData"></param>
         /// <returns></returns>
-        public static ITransformer RetrainPipeline(MLContext mlContext, IDataView trainData)
+        public static ITransformer RetrainPipeline(MLContext mlContext, IDataView trainData,int batchSize = 32, int maxEpochs = 5)
         {
-            var pipeline = BuildPipeline(mlContext);
+            var pipeline = BuildPipeline(mlContext, batchSize, maxEpochs);
             var model = pipeline.Fit(trainData);
 
             return model;
@@ -33,21 +33,11 @@ namespace TweetsClassification
         /// </summary>
         /// <param name="mlContext"></param>
         /// <returns></returns>
-        /*public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
-        {
-            // Data process configuration with pipeline data transformations
-            var pipeline = mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"IsFake",inputColumnName:@"IsFake")      
-                                    .Append(mlContext.MulticlassClassification.Trainers.TextClassification(labelColumnName: @"IsFake", sentence1ColumnName: @"Cleaned_Tweets"))      
-                                    .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"PredictedLabel",inputColumnName:@"PredictedLabel"));
-
-            return pipeline;
-        }*/
-
-        public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
+        public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext, int batchSize = 32, int maxEpochs = 5)
         {
             // Data process configuration with pipeline data transformations
             var pipeline = mlContext.Transforms.Conversion.MapValueToKey(outputColumnName: @"IsFake", inputColumnName: @"IsFake")
-                                    .Append(mlContext.MulticlassClassification.Trainers.TextClassification(labelColumnName: @"IsFake", sentence1ColumnName: @"Cleaned_Tweets", batchSize: 64, maxEpochs: 4))
+                                    .Append(mlContext.MulticlassClassification.Trainers.TextClassification(labelColumnName: @"IsFake", sentence1ColumnName: @"Cleaned_Tweets", batchSize: batchSize, maxEpochs: maxEpochs))
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName: @"PredictedLabel", inputColumnName: @"PredictedLabel"));
 
             return pipeline;

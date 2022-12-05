@@ -9,30 +9,6 @@
     "HasHeader": true,
     "ColumnProperties": [
       {
-        "ColumnName": "Retweets",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 3
-      },
-      {
-        "ColumnName": "Likes",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 3
-      },
-      {
-        "ColumnName": "Date",
-        "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "DateTime",
-        "IsCategorical": false,
-        "Type": "Column",
-        "Version": 3
-      },
-      {
         "ColumnName": "Cleaned_Tweets",
         "ColumnPurpose": "Text",
         "ColumnDataFormat": "String",
@@ -62,8 +38,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "TextClassifcationMulti",
-        "Score": 0.63405797101449279,
-        "RuntimeInSeconds": 439.294,
+        "Score": 0.61956521739130432,
+        "RuntimeInSeconds": 434.0,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
