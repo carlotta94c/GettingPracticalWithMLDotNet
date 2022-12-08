@@ -21,3 +21,7 @@ The goal of this demo is to showcase how to build a text classification model wi
 In a virtual world, where there are thousands of sources of information across the web, bots posting on social medias and AI generating fake news, it's hard to find the truth. In this demo, we'll be training a text classification model able to predict if a Tweet is fake or not, based on a historical dataset of Tweets published by Elon Musk in 2022 ([original dataset](https://www.kaggle.com/datasets/marta99/elon-musks-tweets-dataset-2022)).  
 
 *TweetsClassification* is a console application that allows the user to retrain the ML pipeline initially built with a low code approach (using Model Builder, a UI VS extension), by tweaking some hyperparameters to improve performance and save it as a zip file. It also enables the user to consume the trained ML model, by typing the input text to use for the prediction. 
+
+### Useful Resources
+* [ML.NET samples](https://github.com/dotnet/machinelearning-samples/blob/main/README.md?WT.mc_id=academic-82020-cacaste)
+* [ML.NET docs](https://learn.microsoft.com/en-gb/dotnet/machine-learning/?WT.mc_id=academic-82020-cacaste)
