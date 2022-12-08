@@ -6,7 +6,7 @@ In the near future, every application on every platform will incorporate some fo
 * Speakers: [Carlotta Castelluccio](https://www.linkedin.com/in/carlotta-castelluccio/), Academic Cloud Advocate at Microsoft &
             [Liam Hampton](https://www.linkedin.com/in/liam-conroy-hampton), Regional Cloud Advocate at Microsoft
 * Series page: [Getting Practical With ML.Net](https://developer.microsoft.com/en-us/reactor/series/S-1059/?WT.mc_id=academic-82020-cacaste) 
-* Cloud Skills Challenge: [Join the Challenge](https://aka.ms/ML.NETCSC?WT.mc_id=academic-82020-cacaste)
+* Cloud Skills Challenge: [Join the Challenge](https://aka.ms/ML.NETSeries?WT.mc_id=academic-82020-cacaste)
 
 ## Demo
 ### Pre-requisites
