@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h2>Live Tweet Analysis</h2>
+
+    <p><textarea id="Message" cols="45" placeholder="Type the tweet you wish to verify"></textarea></p>
+
+    <div class="isFake">
+        <h4>Your tweet is...</h4>
+        <p>✅ 👀 ❌</p>
+
+        <div class="marker">
+            <div id="markerPosition" style="left: 45%;">
+                <div>▲</div>
+                <label id="markerValue">Checking</label>
+            </div>
+        </div>
+    </div>
+</div>    

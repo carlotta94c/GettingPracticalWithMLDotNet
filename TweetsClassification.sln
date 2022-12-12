@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TweetsClassification", "TweetsClassification\TweetsClassification.csproj", "{4F8C4454-B7D2-4A72-B0A8-AAF3632EC516}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetsClassifierRazor", "TweetsClassifierRazor\TweetsClassifierRazor.csproj", "{B41226D2-2594-4A39-AB68-1D0C2F2E4BBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4F8C4454-B7D2-4A72-B0A8-AAF3632EC516}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F8C4454-B7D2-4A72-B0A8-AAF3632EC516}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F8C4454-B7D2-4A72-B0A8-AAF3632EC516}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B41226D2-2594-4A39-AB68-1D0C2F2E4BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B41226D2-2594-4A39-AB68-1D0C2F2E4BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B41226D2-2594-4A39-AB68-1D0C2F2E4BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B41226D2-2594-4A39-AB68-1D0C2F2E4BBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
