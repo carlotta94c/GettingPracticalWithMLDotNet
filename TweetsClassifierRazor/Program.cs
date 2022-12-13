@@ -8,7 +8,9 @@ builder.Services.AddRazorPages();
 
 // Add prediction engine
 builder.Services.AddPredictionEnginePool<ModelInput, ModelOutput>()
-    .FromFile("textClassifier.zip");
+    .FromUri(
+      uri: "https://github.com/carlotta94c/GettingPracticalWithMLDotNet/raw/master/TweetsClassification/textClassifier.zip",
+      period: TimeSpan.FromMinutes(1));
 
 var app = builder.Build();
 
