@@ -22,6 +22,8 @@ In a virtual world, where there are thousands of sources of information across t
 
 *TweetsClassification* is a console application that allows the user to retrain the ML pipeline initially built with a low code approach (using Model Builder, a UI VS extension), by tweaking some hyperparameters to improve performance and save it as a zip file. It also enables the user to consume the trained ML model, by typing the input text to use for the prediction. 
 
+*TweetsClassifierRazor* is an ASP.NET Razor Pages web app which consumes the same ML.NET pre-trained text classifier model, by enabling the user to interact with it using a simple graphical user interface. The app code is similar to the code of (this tutorial)[https://learn.microsoft.com/en-us/dotnet/machine-learning/tutorials/sentiment-analysis-model-builder], but it uses the classifier for fake Tweets detection rather than the original sentiment analysis model.
+
 ### Useful Resources
 * [ML.NET samples](https://github.com/dotnet/machinelearning-samples/blob/main/README.md?WT.mc_id=academic-82020-cacaste)
 * [ML.NET docs](https://learn.microsoft.com/en-gb/dotnet/machine-learning/?WT.mc_id=academic-82020-cacaste)
