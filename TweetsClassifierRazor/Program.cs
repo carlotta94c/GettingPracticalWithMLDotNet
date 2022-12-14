@@ -6,11 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-// Add prediction engine
+// Add prediction engine; Prediction Engine Pool Service ensures thread-safety
 builder.Services.AddPredictionEnginePool<ModelInput, ModelOutput>()
-    .FromUri(
-      uri: "https://github.com/carlotta94c/GettingPracticalWithMLDotNet/raw/master/TweetsClassification/textClassifier.zip",
-      period: TimeSpan.FromMinutes(1));
+    .FromFile("textClassifier.zip");
 
 var app = builder.Build();
 
@@ -29,6 +27,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+//Configures endpoint routing for Razor Pages
 app.MapRazorPages();
 
 app.Run();

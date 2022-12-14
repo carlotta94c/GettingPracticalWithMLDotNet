@@ -10,6 +10,8 @@ namespace TweetsClassifierRazor.Pages
         private readonly ILogger<IndexModel> _logger;
         private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
 
+        // Injecting PredictionEnginePool configured in Program.cs into IndexModel constructor
+        // And storing it in a class variable (_predictionEnginePool)
         public IndexModel(ILogger<IndexModel> logger, PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
         {
             _logger = logger;
@@ -21,6 +23,7 @@ namespace TweetsClassifierRazor.Pages
 
         }
 
+        // Method handler using the PredictionEnginePool to make predictions from user input
         public IActionResult OnGetAnalyzeTweet([FromQuery] string text)
         {
             if (String.IsNullOrEmpty(text)) return Content("Checking");
